@@ -1,0 +1,64 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>student info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>First Name</ion-label>
+      <ion-input type="text" [(ngModel)]='studinfo.firstname'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Last Name</ion-label>
+      <ion-input type="text" [(ngModel)]='studinfo.lastname'></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>email</ion-label>
+      <ion-input type="email" [(ngModel)]='studinfo.email'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>birth date</ion-label>
+      <ion-datetime
+        displayFormat="MM/DD/YYYY"
+        pickerFormat="MM/DD/YYYY"
+        [(ngModel)]='studinfo.birthdate'
+        >
+      </ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>address</ion-label>
+      <ion-input type="text" [(ngModel)]='studinfo.address'></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>country of residence</ion-label>
+      <ion-select [(ngModel)]='studinfo.country'>
+        <ion-option value="burundi">Burundi</ion-option>
+        <ion-option value="rwanda">Rwanda</ion-option>
+        <ion-option value="Uganda">Uganda</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Gender</ion-label>
+      <ion-select [(ngModel)]='studinfo.gender'>
+        <ion-option value="m">M</ion-option>
+        <ion-option value="f">F</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-fab right bottom>
+    <button ion-fab color="bg"
+      (click)="submitStudInfo()">
+      <ion-icon name="arrow-dropright-circle"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

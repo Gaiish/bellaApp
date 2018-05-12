@@ -1,0 +1,77 @@
+<!--
+  Generated template for the SchoolinfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='bg'>
+    <ion-title>school info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding id='main'>
+  <ion-list class='input-list'>
+
+    <ion-item class='list-item'>
+      <ion-label floating class='Llabel'>
+        Name of last school attended
+      </ion-label>
+      <ion-input floating class='Llabel' type="text"
+          [(ngModel)]='schoolinfo.lastSchoolAttended'>
+    </ion-input>
+    </ion-item>
+
+    <ion-item class='list-item'>
+      <ion-label floating class='Llabel'>
+        Grade Completed
+      </ion-label>
+      <ion-select [(ngModel)]='schoolinfo.gradeCompleted'>
+        <ion-option value="bachelor">bachelor</ion-option>
+        <ion-option value="high school">high school</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class='list-item'>
+      <ion-label floating class='Llabel'>
+        Name of the faculty you want to register in
+      </ion-label>
+      <ion-select [(ngModel)]='schoolinfo.faculty'>
+        <ion-option value="BIT">Bachelor of IT</ion-option>
+        <ion-option value="BCE">Bachelor of Computer Engineering</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class='list-item'>
+      <ion-label floating class='Llabel'>
+        Grade entering
+      </ion-label>
+      <ion-select [(ngModel)]='schoolinfo.gradeEntering'>
+        <ion-option value='2'>2nd Year</ion-option>
+        <ion-option value="3">3rd Year</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class='list-item'>
+      <ion-label floating class='Llabel'>
+        Starting Date
+      </ion-label>
+      <ion-select [(ngModel)]='schoolinfo.startDate'>
+        <ion-option value='winter'>Winter-January 16th, 2018</ion-option>
+        <ion-option value="fall">Fall-August 16th, 2018</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="bg"
+      (click)="submitSkulInfo()">
+      <ion-icon name="arrow-dropright-circle"></ion-icon>
+    </button>
+  </ion-fab>
+  <div text-center>
+    <p>Almost there!!!</p>
+  </div>
+</ion-content>

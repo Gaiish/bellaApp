@@ -1,0 +1,46 @@
+<!--
+  Generated template for the MedicalinfoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>medical info</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+  <ion-list>
+    <div text-center>
+      Do you have any medical or physical
+      conditions that may affect your
+      attendance at school
+    </div>
+    <ion-item>
+      <ion-select [(ngModel)]='medicalinfo.medCondition'>
+        <ion-option value='yes'>yes</ion-option>
+        <ion-option value="No">No</ion-option>
+      </ion-select>
+    </ion-item>
+    <div text-center>
+      If yes please give a small description
+    </div>
+    <ion-item>
+      <ion-label floating>
+        description
+      </ion-label>
+      <ion-input type="text"
+        [(ngModel)]='medicalinfo.medConditionDescrition'>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+  <div text-center>
+    <button ion-button round
+      (click)="next()"
+      class='btn'>Next</button>
+  </div>
+</ion-content>

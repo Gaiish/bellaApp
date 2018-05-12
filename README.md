@@ -5,11 +5,12 @@
 run: git clone https://github.com/Gaiish/bellaApp.git bellaApp
 
 # Step 2: install all dependecies
-cd bellaApp
+cd bellaApp <br>
 npm install
 
 # Step 3: to run it into the browser
 ionic serve -l
 
 # to test the apk:
-run: ionic cordova build android
+cd apk <br>
+copy the apk to your phone
